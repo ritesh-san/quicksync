@@ -15,7 +15,8 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     && docker-php-ext-install pdo_mysql mbstring zip exif pcntl bcmath gd
 
-RUN apt-get update && apt-get install -y php8.2-pgsql libpq-dev \
+RUN apt-get update && apt-get install -y \
+    libpq-dev \
     && docker-php-ext-install pdo_pgsql
 
 # Install Composer
